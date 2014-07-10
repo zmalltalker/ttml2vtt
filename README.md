@@ -1,5 +1,7 @@
 ## TODO
 
-* simplify XMLName structure
+* simplify XMLName structure [DONE]
 * parse the text properly
-* read from stdin
+* read from stdin [DONE]
+* remove whitespace
+* add styling
