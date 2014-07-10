@@ -6,20 +6,9 @@ import(
 	"os"
 	"io/ioutil"
 	"strings"
+	"github.com/zmalltalker/ttml2vtt/parser"
 )
 
-// tt > body > div -> p
-type Feed struct {
-	XMLName xml.Name `xml:"tt"`
-	Screens []*Screen `xml:"body>div>p"`
-	Lang string `xml:"lang,attr"`
-}
-
-type Screen struct {
-	Text string `xml:",innerxml"`
-	Begin string `xml:"begin,attr"`
-	Duration string `xml:"dur,attr"`
-}
 
 
 func main(){
@@ -29,7 +18,7 @@ func main(){
 		panic("ZOMG")
 	}
 
-	v := Feed{}
+	v := parser.Feed{}
 	err := xml.Unmarshal([]byte(bytes), &v)
 
 	if err != nil {
