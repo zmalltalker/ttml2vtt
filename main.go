@@ -8,12 +8,7 @@ import(
 // tt > body > div -> p
 type Feed struct {
 	XMLName xml.Name `xml:"tt"`
-	Body Body `xml:"body"`
-}
-
-type Body struct {
-	XMLName xml.Name `xml:"body"`
-	Movie Movie `xml:"div"`
+	Screens []*Screen `xml:"body>div>p"`
 }
 
 type Screen struct {
@@ -21,13 +16,6 @@ type Screen struct {
 	Begin string `xml:"begin,attr"`
 	Duration string `xml:"dur,attr"`
 }
-
-type Movie struct {
-	XMLName xml.Name `xml:"div"`
-	Screens []Screen `xml:"p"`
-	Title string
-}
-
 
 
 func main(){
@@ -61,7 +49,7 @@ func main(){
 		return
 	}
 
-	for _, screen := range v.Body.Movie.Screens{
+	for _, screen := range v.Screens{
 		fmt.Printf("%v ---> %v\n", screen.Begin, screen.Duration)
 		fmt.Printf("%v\n", screen.Text)
 	}
