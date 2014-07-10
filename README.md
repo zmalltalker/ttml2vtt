@@ -15,7 +15,7 @@ First of all, install golang and git. Once that's done, simply
 
 ```shell
 go get github.com/zmalltalker/ttml2vtt
-``´
+```
 
 Assuming you have `$GOPATH/bin` in your `$PATH` you should be able to
 run the `ttml2vtt` binary now.
