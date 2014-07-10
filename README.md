@@ -6,7 +6,10 @@ there are several file formats, none of them pretty.
 
 This tool aims to convert from a really ugly format -
 [TTML](http://www.w3.org/TR/ttaf1-dfxp/) into a slighly less ugly
-format, [VTT](http://dev.w3.org/html5/webvtt/).
+format, [VTT](http://dev.w3.org/html5/webvtt/). As it turns out,
+there's no limit to what one can do with subtitles to make the lifes
+of people like me miserable; CSS and what's worse. We'll see where
+this goes...
 
 
 ## Installing it
